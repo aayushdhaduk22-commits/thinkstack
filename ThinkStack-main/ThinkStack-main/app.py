@@ -10,7 +10,7 @@ from itertools import combinations
 # =========================================================
 
 st.set_page_config(
-    page_title="GridPoint",
+    page_title="OptiGrid",
     page_icon="📍",
     layout="wide"
 )
