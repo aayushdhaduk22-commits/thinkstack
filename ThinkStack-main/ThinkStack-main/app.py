@@ -74,7 +74,7 @@ st.markdown("""
 # SIDEBAR
 # =========================================================
 
-st.sidebar.title("⚙️ GridPoint")
+st.sidebar.title("⚙️ Optigrid")
 
 theme = st.sidebar.radio(
     "🎨 Appearance",
