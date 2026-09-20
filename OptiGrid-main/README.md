@@ -1,7 +1,8 @@
 # 📍 OptiGrid
-https://github.com/spdoshi23/ThinkStack 
 
-### Warehouse Location Optimization Platform
+Run:https://thinkstack-aecthiefwfl6yxftnb9jgt.streamlit.app/
+
+## Warehouse Location Optimization Platform
 
 OptiGrid is a warehouse location optimization platform that uses **geographic location and neighborhood order demand** to identify warehouse locations that minimize order-weighted delivery distance.
 
@@ -24,19 +25,19 @@ OptiGrid:
 7. Selects the warehouse combination with the minimum order-weighted delivery distance.
 8. Reassigns neighborhoods to the optimized warehouses.
 9. Compares the current and optimized delivery distances.
-10. Displays the optimized locations and assignments on a map.
+10. Displays optimized locations and assignments on a map.
 
 ## ✨ Features
 
-* 📍 Neighborhood location input
-* 📦 Daily order demand input
-* 🏭 Multiple warehouse support
-* 📏 Geographic distance calculation
-* 🎯 Demand-weighted warehouse optimization
-* 🔗 Neighborhood-to-warehouse assignment
-* 📊 Current vs optimized delivery distance comparison
-* 🗺️ Interactive map visualization
-* 📈 Percentage reduction in weighted delivery distance
+- 📍 Neighborhood location input
+- 📦 Daily order demand input
+- 🏭 Multiple warehouse support
+- 📏 Geographic distance calculation
+- 🎯 Demand-weighted warehouse optimization
+- 🔗 Neighborhood-to-warehouse assignment
+- 📊 Current vs. optimized delivery-distance comparison
+- 🗺️ Interactive map visualization
+- 📈 Percentage reduction in weighted delivery distance
 
 ## 🧠 Optimization Approach
 
@@ -46,80 +47,74 @@ Neighborhood locations are treated as candidate warehouse locations. For a selec
 
 For each combination, the algorithm:
 
-* Calculates the distance from every neighborhood to each selected warehouse.
-* Assigns each neighborhood to its nearest warehouse.
-* Multiplies the nearest distance by that neighborhood's daily order demand.
-* Sums these values to obtain the total order-weighted delivery distance.
+- Calculates the distance from every neighborhood to each selected warehouse.
+- Assigns each neighborhood to its nearest warehouse.
+- Multiplies the nearest distance by that neighborhood's daily order demand.
+- Sums these values to obtain the total order-weighted delivery distance.
 
 The combination with the lowest total value is selected as the optimized warehouse configuration.
 
 ### Objective
 
-The optimization minimizes:
-
+```text
 Total Weighted Delivery Distance = Σ (Distance × Daily Orders)
+```
 
 This gives higher-demand neighborhoods greater importance during optimization.
 
-📐 Distance Calculation
+## 📐 Distance Calculation
 
 OptiGrid uses the Haversine formula to calculate the approximate great-circle distance between two geographic coordinates.
 
 Distance is represented in kilometers.
 
-🛠️ Technology Stack
-Python
-Streamlit
-Pandas
-Python math module
-Python itertools module
-▶️ How to Run
-1. Clone the repository
-git clone <repository-url>
-2. Navigate to the project folder
-cd <project-folder>
-3. Install dependencies
-pip install streamlit pandas
-4. Run the application
-streamlit run app.py
+## 🛠️ Technology Stack
 
-The application will open in your browser.
+- Python
+- Streamlit
+- Pandas
+- Python `math` module
+- Python `itertools` module
 
-📊 Example Result
+## ▶️ How to Run
+1) you can use below link to directly run the app
+https://thinkstack-aecthiefwfl6yxftnb9jgt.streamlit.app/
+
+## 📊 Example Result
 
 Using a sample set of five Bengaluru neighborhoods and two warehouses, OptiGrid produced:
 
+```text
 Current weighted delivery distance: 3634.40 order-km
 Optimized weighted delivery distance: 1659.21 order-km
 Reduction: 1975.19 order-km
 Percentage reduction: 54.35%
+```
 
 These values demonstrate the result for the sample input used during testing and are not intended as a general performance claim.
 
-🔮 Future Improvements
+## 🔮 Future Improvements
 
-Possible extensions include:
+- Warehouse capacity constraints
+- Maximum service radius
+- Vehicle types and delivery costs
+- Fuel-cost estimation
+- Traffic-aware travel times
+- Dynamic demand changes
+- Larger datasets and more scalable optimization algorithms
+- Warehouse candidates at locations other than existing neighborhoods
 
-Warehouse capacity constraints
-Maximum service radius
-Vehicle types and delivery costs
-Fuel cost estimation
-Traffic-aware travel times
-Dynamic demand changes
-Larger datasets and more scalable optimization algorithms
-Allowing warehouse candidates at locations other than existing neighborhoods
-🤖 AI Assistance Disclosure
+## 🤖 AI Assistance Disclosure
 
-AI assistants were used during development for code assistance, debugging, explanation of programming concepts, and UI guidance.
+AI assistants were used during development for code assistance, debugging, programming explanations, and UI guidance.
 
-The team was responsible for the project's problem understanding, algorithm selection, integration, testing, and final implementation decisions.
+The team was responsible for the project’s problem understanding, algorithm selection, integration, testing, and final implementation decisions.
 
-👥 Team
-
-Hack-a-Matics 2026 — OptiGrid
+## 👥 Team
+Thinkstack — OptiGrid
 
 Built for the VECTOR theme.
 
-📄 Project Status
+## 📄 Project Status
 
 OptiGrid is a working prototype demonstrating demand-aware warehouse location optimization and delivery-distance comparison.
